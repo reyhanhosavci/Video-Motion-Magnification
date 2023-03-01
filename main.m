@@ -9,9 +9,9 @@ A(m{:})=1;
 B = bwdist(A) <= r;
 B=im2double(B);
 f=5; % frekans
-A1=0.25;%kayma miktarý
-fs=30;%frame
-alpha=5;
+A1=0.25;%pixel count-how many pixel you wan to move 
+fs=30;% frame/second
+alpha=5; % magnification coefficient
 
 for i=1:180
     J = imtranslate(B,[0, A1.*sin(2*pi.*(f./fs).*i)],'FillValues',0);
